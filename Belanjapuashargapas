@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package supermarkethyperimart;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author naufa
+ */
+public class Supermarkethyperimart {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        System.out.println("Selamat datang di Supermarket Hyperimart!!!");
+        System.out.println("Daftar Barang : ");
+        System.out.println("1. Mie Instan Rp5.000,00");
+        System.out.println("2. Pocora Sweat Rp8.000,00");
+        System.out.println("3. Sabun Mandi Rp12.000,00");
+        System.out.println("4. Alat Masak Rp40.000,00");
+        System.out.println("5. Dekorasi Rumah Rp120.000,00");
+        System.out.println("-----------------------");
+        
+        System.out.println("Pilih Barang : ");
+        int barang = input.nextInt();
+        
+        int hargabarang = 0;
+        
+        switch (barang){
+            case 1:hargabarang=5000;break;
+            case 2:hargabarang=8000;break;
+            case 3:hargabarang=12000;break;
+            case 4:hargabarang=40000;break;
+            case 5:hargabarang=120000;break;
+            default:System.out.println("Stock Barang Habis");
+        }
+        System.out.print("Uang yang dimiliki = ");
+        int uang = input.nextInt();
+        int kembalian;
+        if (uang>hargabarang){
+            kembalian=uang-hargabarang;
+             System.out.println("Kembalianmu = "+kembalian);            
+        }else{
+            System.out.println("Mohon maaf uang anda tidak cukup");
+    }
+    }
+    
+}
